@@ -1,10 +1,9 @@
 from django.db import models
-from taggit.managers import TaggableManager
 
 class Post(models.Model):
     title = models.CharField(max_length=255) # заголовок поста
     context = models.TextField(max_length=10000)
-    datetime = models.DateTimeField(u'Дата публикации')  # дата публикации
+    created = models.DateTimeField()  # дата публикации
     public = models.BooleanField(default=True)
 
     #datetime = models.DateTimeField(u'Дата публикации') # дата публикации
